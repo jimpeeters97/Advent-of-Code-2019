@@ -14,7 +14,8 @@ fun main() {
 
             for (x in 0..99) {
                 for (y in 0..99) {
-                    inputList = originalList
+                    inputList = arrayListOf()
+                    inputList.addAll(originalList)
 
                     inputList[1] = x
                     inputList[2] = y
@@ -44,12 +45,13 @@ fun main() {
                         opThreeIdx = opTwoIdx + 1
                     }
 
-                    println(inputList[0])
-
                     if (inputList[0] == 19690720) {
-                        found = true
                         println("Value at position 1 is: " + inputList[1])
                         println("Value at position 2 is: " + inputList[2])
+
+                        println((100 * inputList[1]) + inputList[2])
+
+                        found = true
                     }
                 }
             }
